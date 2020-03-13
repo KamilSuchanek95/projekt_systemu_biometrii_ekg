@@ -1,0 +1,2 @@
+# projekt_systemu_biometrii_ekg
+Kody i materiały używane przy projektowaniu przykładowego systemu biometrii opartego o elektryczną aktywność serca. Projekt obejmuje proces od filtracji sygnału po klasyfikację, wraz z uaktualnianiem liczby zarejestrowanych użytkowników. Akwizycja danych zostaje pominięta. Zostaną użyte dane pochodzące z PhysioNet-u [https://www.physionet.org/content/ecgiddb/1.0.0/].
