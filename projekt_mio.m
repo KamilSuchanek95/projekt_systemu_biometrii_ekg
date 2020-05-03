@@ -5,8 +5,30 @@ clear;clc
 load('records with data from Physionet.mat');
 R = create_Rs_struct(r);
 f = create_frames_struct(r, R);
+%% 
+dt = 0.002;
+t = 0:dt:dt*(numel(r.person_1.record_1.filtered)-1);
+for i = 1:numel(fieldnames(r))
+    person = sprintf('person_%i', i);
+    for j = 1:numel(fieldnames(r.(person)))
+        record = sprintf('record_%i', j);
+        figure('Position', [0 0 1000 600])
+        plot(t, r.(person).(record).filtered); hold on;
+        plot(t(R.(person).(record)), r.(person).(record).filtered(R.(person).(record)), 'r*')
+        str = sprintf('{r.%s.%s} continue? [enter]', person, record);
+        input(str)
+        close
+    end
+end
 
 
+
+%% przegladanie okienek
+for i = 1:numel(fieldnames(f))
+    person = sprintf('person_%i', i);
+    plot(f.(person))
+    close
+end
 
 
 
