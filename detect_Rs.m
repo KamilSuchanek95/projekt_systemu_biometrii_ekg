@@ -19,8 +19,13 @@ end
 R2 = [];
 for i = 1:numel(R)
     j = R(i);
-    one = find(signal(j:j+25) == max(signal(j:j+25)));
-    R2(end+1,1) = one(1) + j - 1;
+    if j+25 <= numel(signal)
+        one = find(signal(j:j+25) == max(signal(j:j+25)));
+        R2(end+1,1) = one(1) + j - 1;
+    else
+        one = find(signal(j:end) == max(signal(j:end)));
+        R2(end+1,1) = one(1) + j - 1;
+    end
 end
 
 

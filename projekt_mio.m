@@ -1,19 +1,10 @@
 %% Okienkowanie
 % 80<- R ->170
 % detekcja R
-signal = r.person_1.record_1.filtered;
-R = detect_Rs(signal);
-%%
-frames = [];
-n = numel(signal);
-for i = 1:numel(R)
-    from = R(i)-80; to = R(i)+170;
-    if from > 0 && to < n
-        frames(end+1, 0:249) = signal(from:to);
-    end
-end
-
-
+clear;clc
+load('records with data from Physionet.mat');
+R = create_Rs_struct(r);
+f = create_frames_struct(r, R);
 
 
 
