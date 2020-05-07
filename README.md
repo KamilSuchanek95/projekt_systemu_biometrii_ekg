@@ -13,7 +13,7 @@ Skrypt należy uruchomić po instalacji programu wfdb na którymkolwiek linuxie,
 
 ### Aktualne dane z Workspace Matlaba
 
-Znajdują się w folderze głównym: 
+Znajdują się w folderze głównym i są używane w skrypcie `test_code.m`: 
   - act_layers.mat - struktura sieci
   - act_options.mat - opcje potrzebne przy tworzeniu sieci
   - act_net.mat - obiekt wytrenowanej sieci dla pięciu osób
