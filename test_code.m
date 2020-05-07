@@ -1,5 +1,6 @@
 clc;
 %% Tworzenie macierzy komorkowych
+load('matlab_data\f r R load.mat');
 numbers_of_persons = [1,2,9,36,52];
 signals = {};
 labels = {};
