@@ -1,3 +1,4 @@
+addpath('functions')
 %% Okienkowanie
 % 80<- R ->170
 % detekcja R
@@ -37,10 +38,11 @@ for i = 1:numel(fieldnames(f))
     person = sprintf('person_%i', i);
     num = size(f.(person), 2);
     num2 = ceil(num/2); num1 = ceil(num/2) - 1;
-    test.(person) = [];
     test.(person)(1:251, 1:num1) = f.(person)(:,1:num1);
     train.(person)(1:251, 1:num2) = f.(person)(:,1:num2);
 end
+
+%%
 
 
 
